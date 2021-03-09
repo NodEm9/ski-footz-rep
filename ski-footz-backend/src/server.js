@@ -16,7 +16,7 @@ import usersRouter from './routes/users';
  
 
 app.use('/', indexRouter);
-app.use('/', usersRouter);
+app.use('/', usersRouter); 
 
 
 app.listen(port, () => {

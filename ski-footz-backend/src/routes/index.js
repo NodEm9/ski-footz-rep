@@ -23,7 +23,7 @@ router.get('/api/products/:productId', async (req, res) =>{
 )
   const db = client.db('ski-db');
   const product = await db.collection('products').findOne({ id: productId });
-   if (product){
+  if(product){
       res.status(200).json(product); 
    }else{
       res.status(404).json('Could not find product!');
