@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "babel ./src --out-dir ./build",
+    "start": "node ./build/server.js",
     "dev": "npx nodemon --exec npx babel-node src/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/runtime": "^7.13.9",
+    "@babel/runtime": "^7.13.10",
     "connect-history-api-fallback": "^1.6.0",
     "cookie-parser": "^1.4.5",
     "debug": "^4.3.1",
@@ -20,6 +22,7 @@
     "nodemon": "^2.0.7"
   },
   "devDependencies": {
+    "@babel/cli": "^7.13.10",
     "@babel/core": "^7.13.8",
     "@babel/node": "^7.13.0",
     "@babel/plugin-transform-runtime": "^7.13.9",

@@ -6,10 +6,12 @@ import { MongoClient } from 'mongodb';
 router.get('/api/users/:userId/cart', async (req, res) => {
   const { userId } = req.params;
   const client = await MongoClient.connect(
-    'mongodb://localhost:27017',
+     process.env.MONGO_USER && process.env.MONGO_PASS 
+     ? `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.9b54o.gcp.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`
+     :'mongodb://localhost:27017',
     { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  const db = client.db('ski-db');
+  const db = client.db(process.env.MONGO_DBNAME || 'ski-db');
   const user = await db.collection('users').findOne({ id: userId });
   if(!user) return res.status(404).json('Could not find User with the Id ');
   const products = await db.collection('products').find({}).toArray();
@@ -25,10 +27,12 @@ router.post('/api/users/:userId/cart', async (req, res) => {
   const { userId } = req.params;
   const { productId } = req.body;
   const client = await MongoClient.connect(
-    'mongodb://localhost:27017',
+     process.env.MONGO_USER && process.env.MONGO_PASS 
+     ? `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.9b54o.gcp.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`
+     :'mongodb://localhost:27017',
     { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  const db = client.db('ski-db');
+  const db = client.db(process.env.MONGO_DBNAME || 'ski-db');
   await db.collection('users').updateOne({ id: userId }, {
     $addToSet: { cartItems: productId },
   });
@@ -45,10 +49,12 @@ router.delete('/api/users/:userId/cart/:productId', async (req, res) => {
   const { productId } = req.params;
   const { userId } = req.params;
   const client = await MongoClient.connect(
-    'mongodb://localhost:27017',
+     process.env.MONGO_USER && process.env.MONGO_PASS 
+     ? `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.9b54o.gcp.mongodb.net/${process.env.MONGO_DBNAME}?retryWrites=true&w=majority`
+     :'mongodb://localhost:27017',
     { useNewUrlParser: true, useUnifiedTopology: true }
 )
-  const db = client.db('ski-db');
+  const db = client.db(process.env.MONGO_DBNAME || 'ski-db');
   await db.collection('users').updateOne({ id: userId }, {
   $pull: { cartItems: productId },
   });
