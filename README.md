@@ -9,12 +9,12 @@
 - [MongoDB](https://www.mongodb.com/) and
 - [heroku](https://www.heroku.com/home)
 
-The Ecommerce app displays fake-data which was manuelly populated into the mongodb shell during development and at when configurating for production release. 
+The Ecommerce app displays fake-data which was manuelly populated into the `mongodb shell` during development and at when configurating for production release. 
 
 # Building Front End
  The frontend was built with Vue.js
 
-*T*he app Adds to cart, delete from cart, it also views products details and there is computed property to calculate totalPrice of products in cart. With various [Vue.js derectives](https://vuejs.org/v2/api/#Vue-directive) **decoupled** pages for scalability, simplicity, readablity and realibity for reuse purposes where binded.
+*T*he app Adds to cart, delete from cart, it also views products details and there is computed property to calculate totalPrice of products in cart. With various [Vue.js derectives](https://vuejs.org/v2/api/#Vue-directive) `decoupled` pages for `scalability, simplicity, readablity and realibity` for reuse purposes where binded.
  
 # Building Back End
 The backend was build with the following Technologies:
