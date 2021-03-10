@@ -29,7 +29,7 @@ export default {
     margin: auto;
   }
 
-  @media screen and (max-width: 40em)  {
+  @media screen and (max-width: 30em)  {
     #page-wrap {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -42,7 +42,7 @@ export default {
     font-size: 30px;
   }
 }
- @media screen and (max-width: 80em) {
+ @media screen and (max-width: 70em) {
   #page-wrap {
     display: grid;
     grid-template-columns: auto 1fr;
