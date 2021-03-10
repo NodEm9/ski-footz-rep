@@ -31,8 +31,8 @@ export default {
 }
 #app {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
   margin: 0 auto;
   min-width: 800px;
   font-family: Avenir, Helvetica, Arial, sans-serif;
