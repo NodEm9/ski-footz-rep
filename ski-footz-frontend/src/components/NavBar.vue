@@ -17,12 +17,11 @@ export default {
 
 <style scoped>
   #nav-bar {
+    display: flex;
     border-bottom: 2px solid #d5d;
     height: 75px;
     width: 100%;
-    background-color: green;
-    grid-column: span 12;
-
+    background-color: rgb(253, 253, 233);
 }
 
   #products-link {
@@ -45,4 +44,5 @@ export default {
     right: 16px;
     top: 16px;
   }
+
 </style>
