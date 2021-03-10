@@ -2,7 +2,7 @@ import express from 'express';
 const router = express.Router();
 import { MongoClient } from 'mongodb';
 
-
+ 
 /* GET home page. */
 router.get('/api/products', async (req, res) => {
   const client = await MongoClient.connect(
