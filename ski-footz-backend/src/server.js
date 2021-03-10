@@ -7,7 +7,6 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); 
-
 app.use('/images', express.static(path.join(__dirname, '../assets')));
 app.use(express.static(path.resolve(__dirname, '../dist'), { maxAge: '1yr', etag: false }));
 app.use(history());
