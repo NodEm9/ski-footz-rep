@@ -20,7 +20,7 @@ export default {
 <style >
  #page-wrap {
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr;
     gap: 26px;
     min-height: 100vh;
     width: auto;
@@ -28,4 +28,30 @@ export default {
     left: 2px;
     margin: auto;
   }
+
+  @media screen and (max-width: 40em)  {
+    #page-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 26px;
+    min-height: 100vh;
+    width: auto;
+    position: relative;
+    left: 2px;
+    margin: auto;
+    font-size: 30px;
+  }
+}
+ @media screen and (max-width: 80em) {
+  #page-wrap {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 26px;
+    min-height: 100vh;
+    width: auto;
+    position: relative;
+    left: 2px;
+    margin: auto;
+  }
+}
 </style>
