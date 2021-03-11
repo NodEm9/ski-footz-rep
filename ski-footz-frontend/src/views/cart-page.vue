@@ -1,7 +1,7 @@
 <template>
-  <div id="app">
-     <h1>Shopping Cart</h1>
-      <ProductsList 
+  <div id="app" >
+     <h1>Items in cart</h1>
+       <ProductsList 
         :products="cartItems" 
         v-on:remove-from-cart="removeFromCart($event)"/>     
       <h3 id="total-price">Total: ${{ totalPrice }}</h3>

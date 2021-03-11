@@ -1,7 +1,8 @@
 <template>
   <div id="app">
-      <NavBar />
-    <router-view/>
+   <NavBar />
+    <!-- <promotions-section /> -->
+     <router-view/>
     <Footer />
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import Footer from './components/Footer.vue'
 import NavBar from './components/NavBar.vue'
+// import PromotionsSection from './components/PromotionsSection.vue'
 
 export default {
   name: 'App',
@@ -17,6 +19,7 @@ export default {
   components: {
     NavBar,
     Footer,
+    // PromotionsSection,
   }
 }
 </script>
@@ -35,10 +38,9 @@ export default {
   min-height: 100vh;
   margin: 0 auto;
   min-width: 800px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-align: center; */
   color: #2c3e50;
 }
 
@@ -54,16 +56,4 @@ export default {
     padding: 16px;
   }
 
-/* #nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-} */
 </style>

@@ -24,9 +24,8 @@ export default {
     gap: 26px;
     min-height: 100vh;
     width: auto;
-    position: relative;
     left: 2px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   @media screen and (max-width: 30em)  {
@@ -36,7 +35,7 @@ export default {
     gap: 26px;
     min-height: 100vh;
     width: auto;
-    position: relative;
+    /* position: relative; */
     left: 2px;
     margin: auto;
     font-size: 30px;
@@ -49,7 +48,7 @@ export default {
     gap: 26px;
     min-height: 100vh;
     width: auto;
-    position: relative;
+    /* position: relative; */
     left: 2px;
     margin: auto;
   }

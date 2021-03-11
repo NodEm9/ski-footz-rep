@@ -43,4 +43,21 @@ h2 {
       margin: 0;
   }
 
+  @media screen and (max-width: 40em) {
+  #footer-section {
+  display: block;
+  position: relative;
+  background: grey;
+  min-height: 100vh;
+  margin-bottom: 0;
+  font-family: Poppins sans-serif;
+}
+
+h2 {
+          display: block;
+          text-align: right;
+          margin: 25px;
+}
+  }
+
 </style>

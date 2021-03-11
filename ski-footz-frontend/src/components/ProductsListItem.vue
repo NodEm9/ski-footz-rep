@@ -9,7 +9,7 @@
    <button 
       class="remove-button"
       v-on:click="$emit('remove-from-cart', product.id)"
-      >Remove From Cart</button>       
+      ><font-awesome-icon class="font-Awesome"  icon="trash-alt"/></button>       
   </div>
 </template>
 
@@ -28,12 +28,12 @@ export default {
     margin: auto;
     width: 100%;
     justify-content: space-between;
-    flex-direction: row;
   }
 
   .product-image {
     flex: 1;
     height: 100px;
+    border: 1px solid green;
     max-width: 100px;
     margin: 1px;
   }
@@ -41,15 +41,34 @@ export default {
   .details-wrap {
     padding: 0 16px;
     flex: 3;
-    /* place-items: center; */
-    width: clamp(46ch, 50%, 36ch );
+    width: clamp(23ch, 50%, 46ch );
   }
 
    .remove-button {
+    background: none;
     flex: 1;
     margin: 20px;
-    max-width: 190px;
+    max-width: 100px;
     right: 0;
+  }
+
+  .font-Awesome {
+   width: 55px;
+   height: 30px;
+   color: black;
+  }
+
+  @media screen and (max-width: 40em){
+    .product-container {
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    padding: 16px;
+    margin: auto;
+    width: 100%;
+    font-size: larger;
+    justify-content: space-between;
+    flex-direction: row;
+  }
   }
 
 </style>
