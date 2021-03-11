@@ -33,7 +33,6 @@ export default {
   .product-image {
     flex: 1;
     height: 100px;
-    border: 1px solid green;
     max-width: 100px;
     margin: 1px;
   }
@@ -59,7 +58,7 @@ export default {
   }
 
   @media screen and (max-width: 40em){
-    .product-container {
+   .product-container {
     border-bottom: 1px solid #ddd;
     display: flex;
     padding: 16px;
