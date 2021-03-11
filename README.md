@@ -24,8 +24,8 @@ The backend was build with the following Technologies:
 ### DataBase
 While for the database [MongoDB](https://www.mongodb.com/) was use to persist our data more permanetly. and
 
-### Heroku
-[Heroku](https://www.heroku.com/home) was use to publish the git respository online.
+### Deployment
+[Heroku](https://www.heroku.com/home) was use to deploy and publish the git respository online.
 
 
 
